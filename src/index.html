@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <style>
+            * {
+                margin: 0;
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='app'>
+            <input v-model='message'>
+            <span>{{message}}</span>
+        </div>
+        <!-- 采用vue代码实现 -->
+        <!-- <script src='./vendors/vue.js'></script>
+        <script>
+            const vm = new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello world'
+                }
+            });
+        </script> -->
+        <!-- 自行实现 -->
+        <script src='watcher.js'></script>
+        <script src='util.js'></script>
+        <script src='observer.js'></script>
+        <script src='compile.js'></script>
+        <script src='mvvm.js'></script>
+        <script>
+            const vm = new MVVM({
+                el: '#app',
+                data: {
+                    message: 'Hello world'
+                }
+            });
+        </script>
+    </body>
+</html>
